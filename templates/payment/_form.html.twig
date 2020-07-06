@@ -1,0 +1,86 @@
+{{ form_start(form, { attr : { ' method' : 'post'}}) }}
+
+    <h5 class="center">Votre identité</h5>
+    <div class="input-field col s12 l6">
+
+        {{ form_label(form.participant.email) }}
+        {{ form_widget(form.participant.email,  { 'attr': {'class': 'validate'} }) }}
+    </div>
+    <div class="input-field col s12 l6">
+
+        {{ form_label(form.participant.name) }}
+        {{ form_widget(form.participant.name,  { 'attr': {'class': 'validate'} }) }}
+    </div>
+    <div class="input-field col s12 l6">
+
+        {{ form_label(form.amount) }}
+        {{ form_widget(form.amount,  { 'attr': {'class': 'validate'} }) }}
+    </div>
+    <div class="input-field col s12 l6">
+        <a href="" class="btn btn-large waves-effect waves-light grey col s12">Annuler</a>
+    </div>
+    <div class="input-field col s12 l6">
+        <button type="submit" class="btn btn-large waves-effect waves-light pink lighten-1 col s12" type="submit" name="action">
+            Participer
+            <i class="material-icons right">euro_symbol</i>
+        </button>
+    </div>
+{{ form_end(form) }}
+
+
+{# <form action="{{path('payment_save', {'id': campaign.id})}}" method="POST">
+                            <h5 class="center">Votre identité</h5>
+                            <div class="input-field col s12 l6">
+                                <input id="email" type="email" class="validate" name="mail">
+                                <label for="email">Votre Email</label>
+                        
+                            </div>
+
+                             <div class="input-field col s12 l6">
+                                <input id="name" type="text" class="validate" name="name">
+                                <label for="name">Votre nom</label>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input id="mount" type="number" class="validate" name="amount">
+                                <label for="mount">Votre participation</label>
+                            </div>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Masquer mon identité auprès des autres participants</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Masquer le montant de ma participation auprès des autres participants</span>
+                                </label>
+                            </p>
+                            <div class="clearfix"></div>
+                            <h5 class="center">Paiement</h5>
+                            <div class="input-field col s12">
+                                <input id="card_name" type="text" class="validate">
+                                <label for="card_name">Nom sur la carte</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="card_number" type="text" class="validate">
+                                <label for="card_number">Numéro de la carte</label>
+                            </div>
+                            <div class="input-field col s12 l8">
+                                <input id="card_expiration_date" type="date" class="validate">
+                                <label for="card_expiration_date">Date d'expiration</label>
+                            </div>
+                            <div class="input-field col s12 l4">
+                                <input id="card_cvv" type="text" class="validate">
+                                <label for="card_cvv">CVV</label>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <a href="#!" class="btn btn-large waves-effect waves-light grey col s12">Annuler</a>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <button class="btn btn-large waves-effect waves-light pink lighten-1 col s12" type="submit" name="action">
+                                    Participer
+                                    <i class="material-icons right">euro_symbol</i>
+                                </button>
+                            </div>
+                        </form> #}
